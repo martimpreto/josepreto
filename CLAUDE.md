@@ -20,7 +20,7 @@ Instruções permanentes para qualquer sessão futura de trabalho neste reposit�
 - Escritório: Av. 5 de Outubro, 102, R/C, 1050-060 Lisboa
 - Telefone: +351 910 165 257 (link `tel:+351910165257`)
 - Email: josepreto6975l@gmail.com (link `mailto:`)
-- Horário: [A PREENCHER]
+- Horário: **não publicar** (decisão do cliente, 26/09/2026). Não acrescentar horário ao site.
 - Áreas de prática: Direito Penal · Direito da Família · Direito dos Contratos · Direito Administrativo · Direito Fiscal · Direito Marítimo
 - Formação académica (reproduzir com esta precisão, sem transformar frequências em graus):
   - Licenciatura em Direito, menção em Ciências Jurídico-Políticas, Faculdade de Direito da Universidade de Lisboa

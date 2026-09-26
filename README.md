@@ -52,17 +52,13 @@ Recomendado: instalar o editor gratuito **Visual Studio Code**. No GitHub Deskto
 2. O texto visível está entre marcas como `<p>…</p>` (parágrafo), `<h2>…</h2>` (título) ou `<li>…</li>` (item de lista). **Altere só o texto entre as marcas**, nunca as marcas.
 3. Guarde (`Ctrl+S` / `Cmd+S`) e atualize a página no browser para ver o resultado.
 
-**Exemplo — preencher o horário.** Em `contactos.html`, procure:
+**Exemplo — mudar o email.** Em `contactos.html`, procure:
 
 ```html
-<dd><span class="por-preencher">[A PREENCHER: horário de atendimento]</span></dd>
+<dd><a href="mailto:josepreto6975l@gmail.com">josepreto6975l@gmail.com</a></dd>
 ```
 
-e substitua por, por exemplo:
-
-```html
-<dd>Dias úteis, das 9h30 às 18h00</dd>
-```
+e altere o endereço **nos dois sítios** da linha (dentro de `href="mailto:…"` e no texto visível). O email aparece também em `informacao-legal.html` e `privacidade.html`.
 
 **Atenção ao menu e ao rodapé:** estão repetidos em **todas** as páginas. Para mudar um deles, use no VS Code **Edit → Replace in Files** (`Ctrl+Shift+H` / `Cmd+Shift+H`) para alterar todos os ficheiros de uma só vez.
 

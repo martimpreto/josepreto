@@ -4,9 +4,20 @@ Cada versão, explicada em linguagem simples. A mais recente fica em cima.
 
 ---
 
+## Versão 1.1 — 26 de setembro de 2026 · ajustes após revisão
+
+Integrada no `main`.
+
+- **Horário retirado** da página Contactos: por decisão de José Preto, o horário não é publicado.
+- **Direito Penal**: a frase "No processo penal, o advogado pode intervir como defensor de arguido…" foi substituída por "Compreende a posição processual do arguido, do assistente e do ofendido, incluindo o pedido de indemnização civil.", mais neutra.
+- Mantida a ligação "Contactos" na faixa bordeaux da página inicial.
+- Documentação atualizada (`CLAUDE.md`, `CONFORMIDADE.md`, `README.md`).
+
+---
+
 ## Versão 1 — 26 de setembro de 2026 · primeira construção
 
-Ramo: `claude/serene-dirac-6qiwyk`. **Ainda não integrada no `main`**, logo ainda não publicada.
+Integrada no `main` a 26 de setembro de 2026. O site só fica visível na internet depois de ativado o GitHub Pages (README, secção 8).
 
 **O que foi feito**
 - Seis páginas públicas: Início, Sobre, Áreas de Prática, Contactos, Informação Legal e Política de Privacidade.
@@ -26,7 +37,6 @@ Ramo: `claude/serene-dirac-6qiwyk`. **Ainda não integrada no `main`**, logo ain
 - Verificação de conformidade: sem expressões proibidas.
 
 **Pendente (ver `CONFORMIDADE.md`)**
-- Horário de atendimento.
 - Fotografia.
 - Validação dos textos por José Preto.
 - Ativação do GitHub Pages e ligação do domínio `josepreto.pt`.

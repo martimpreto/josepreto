@@ -4,7 +4,7 @@ A validar por **José Preto** antes de o site ficar público. Marque cada ponto 
 
 ## A. Informação em falta ou a confirmar
 
-- [ ] **Horário de atendimento**: indicar o horário a publicar em `contactos.html` (ou decidir não publicar horário e retirar a linha).
+- [x] **Horário de atendimento**: decidido não publicar horário (26/09/2026).
 - [ ] **Formação teológica**: confirmar a forma exata de apresentação — "Formação Teológica em âmbito jurisdicional ortodoxo (Magister)". Confirmar se "Magister" é a designação oficial conferida e se deve ser indicada a instituição.
 - [ ] **Honorários**: decidir se pretende publicar informação sobre honorários (critérios, forma de cálculo). Nesta versão **não** há qualquer referência a honorários.
 - [ ] **Fotografia**: decidir se pretende publicar fotografia. Até lá fica um espaço neutro com as iniciais "JP".
