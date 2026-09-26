@@ -1,0 +1,113 @@
+/* ═══════════════════════════════════════════════════════════════════
+ * JOSÉ PRETO · ADVOGADO — VALORES DE DESIGN
+ *
+ * Este ficheiro é a única fonte das cores, fontes, tamanhos e
+ * espaçamentos do site. Nenhum outro ficheiro contém um código de cor.
+ * Mude um valor na PARTE 1 e o site inteiro muda em conformidade.
+ *
+ * PARTE 1 — os valores. É esta parte que se edita.
+ * PARTE 2 — ligações internas. Não deve ser necessário mexer.
+ * ═══════════════════════════════════════════════════════════════════ */
+
+/* ───────────────────────────────────────────────────────────────────
+ * PARTE 1 — OS VALORES
+ * ─────────────────────────────────────────────────────────────────── */
+:root {
+  /* ---------- Paleta: branco, azul e bordeaux (um terço cada) -------
+   * Contrastes medidos (mínimo exigido WCAG AA para texto: 4,5:1).
+   * O azul e o bordeaux NÃO contrastam entre si (1,05:1): nunca pôr
+   * texto azul sobre bordeaux nem o contrário. Separá-los sempre com
+   * branco.
+   */
+  --cor-branco: #ffffff;
+  --cor-perola: #f7f6f3; /* fundo alternativo discreto                 */
+  --cor-azul: #1f3a5a; /* cabeçalho, títulos — 11,6:1 sobre branco   */
+  --cor-bordeaux: #6e1f2b; /* rodapé, links, filetes — 11,1:1 s/ branco */
+  --cor-grafite: #2b2b2b; /* texto corrido — 14,2:1 sobre branco        */
+  --cor-cinza: #555555; /* texto secundário — 7,5:1 s/ branco         */
+  --cor-linha: #dcd8d0; /* linhas finas (decorativas, não é texto)    */
+
+  /* Texto sobre fundos escuros */
+  --cor-sobre-azul: #ffffff; /* 11,6:1 */
+  --cor-sobre-azul-suave: #d9e1ea; /* 8,8:1  */
+  --cor-sobre-bordeaux: #ffffff; /* 11,1:1 */
+  --cor-sobre-bordeaux-suave: #f1dcdf; /* 8,5:1  */
+
+  /* ---------- Tipografia ------------------------------------------ */
+  --fonte-titulos: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --fonte-texto: "Source Sans 3", "Segoe UI", Roboto, Arial, sans-serif;
+
+  --texto-pequeno: 0.875rem;
+  --texto-base: 1.0625rem;
+  --texto-grande: 1.25rem;
+  --titulo-3: 1.3rem;
+  --titulo-2: clamp(1.5rem, 1.2rem + 1.2vw, 2rem);
+  --titulo-1: clamp(2rem, 1.4rem + 2.6vw, 3.25rem);
+
+  --altura-linha: 1.65;
+
+  /* ---------- Espaçamento e medidas ------------------------------- */
+  --espaco-1: 0.5rem;
+  --espaco-2: 1rem;
+  --espaco-3: 1.5rem;
+  --espaco-4: 2.5rem;
+  --espaco-5: 4rem;
+  --espaco-6: 6rem;
+
+  --largura-maxima: 68rem; /* largura máxima da página           */
+  --largura-texto: 42rem; /* linhas de texto confortáveis        */
+  --margem-lateral: 1rem; /* margem mínima no telemóvel          */
+}
+
+/* ───────────────────────────────────────────────────────────────────
+ * PARTE 2 — FONTES LOCAIS (não usar serviços externos: RGPD)
+ * Licença SIL Open Font License 1.1 — ver assets/fonts/LICENCA-*.txt
+ * ─────────────────────────────────────────────────────────────────── */
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200 900;
+  src: url(../fonts/source-serif-4-latin-wght-normal.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200 900;
+  src: url(../fonts/source-serif-4-latin-ext-wght-normal.woff2) format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200 900;
+  src: url(../fonts/source-sans-3-latin-wght-normal.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200 900;
+  src: url(../fonts/source-sans-3-latin-ext-wght-normal.woff2) format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: italic;
+  font-display: swap;
+  font-weight: 200 900;
+  src: url(../fonts/source-sans-3-latin-wght-italic.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: italic;
+  font-display: swap;
+  font-weight: 200 900;
+  src: url(../fonts/source-sans-3-latin-ext-wght-italic.woff2) format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}

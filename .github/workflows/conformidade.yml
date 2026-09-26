@@ -1,0 +1,19 @@
+# Verificação automática de conformidade deontológica.
+# Corre sempre que há alterações no GitHub e marca a alteração com ✓ ou ✗.
+# O que é verificado está descrito em scripts/verificar-conformidade.sh.
+name: Conformidade
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Procurar expressões proibidas e rastreamento
+        run: bash scripts/verificar-conformidade.sh

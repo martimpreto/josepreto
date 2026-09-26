@@ -1,0 +1,548 @@
+/* ═══════════════════════════════════════════════════════════════════
+ * JOSÉ PRETO · ADVOGADO — ESTILOS
+ *
+ * Todas as cores, fontes e medidas vêm de tokens.css. Para mudar o
+ * aspeto do site, edite tokens.css, não este ficheiro.
+ *
+ * Distribuição das três cores (branco / azul / bordeaux):
+ *   azul     → cabeçalho e faixa de título (topo da página)
+ *   branco   → conteúdo
+ *   bordeaux → faixa de informação e rodapé (fundo da página)
+ * ═══════════════════════════════════════════════════════════════════ */
+
+/* ---------- Base ------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--cor-branco);
+  color: var(--cor-grafite);
+  font-family: var(--fonte-texto);
+  font-size: var(--texto-base);
+  line-height: var(--altura-linha);
+  --cor-foco: var(--cor-bordeaux);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--fonte-titulos);
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--cor-azul);
+  margin: 0 0 var(--espaco-2);
+}
+
+h1 {
+  font-size: var(--titulo-1);
+}
+h2 {
+  font-size: var(--titulo-2);
+}
+h3 {
+  font-size: var(--titulo-3);
+  font-weight: 600;
+}
+
+p,
+ul,
+ol,
+dl {
+  margin: 0 0 var(--espaco-2);
+}
+
+a {
+  color: var(--cor-bordeaux);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--cor-foco);
+  outline-offset: 3px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visualmente-oculto {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Ligação "Saltar para o conteúdo" (teclado) */
+.saltar {
+  position: absolute;
+  left: var(--espaco-2);
+  top: -10rem;
+  z-index: 10;
+  padding: var(--espaco-1) var(--espaco-2);
+  background: var(--cor-branco);
+  color: var(--cor-azul);
+  font-weight: 600;
+}
+.saltar:focus {
+  top: var(--espaco-2);
+}
+
+.contentor {
+  width: 100%;
+  max-width: var(--largura-maxima);
+  margin: 0 auto;
+  padding: 0 max(var(--margem-lateral), 4vw);
+}
+
+.texto > * {
+  max-width: var(--largura-texto);
+}
+
+address {
+  font-style: normal;
+}
+
+/* ---------- Zonas de cor ----------------------------------------- */
+.zona-azul {
+  background: var(--cor-azul);
+  color: var(--cor-sobre-azul);
+  --cor-foco: var(--cor-branco);
+}
+.zona-bordeaux {
+  background: var(--cor-bordeaux);
+  color: var(--cor-sobre-bordeaux);
+  --cor-foco: var(--cor-branco);
+}
+.zona-azul h1,
+.zona-azul h2,
+.zona-azul h3,
+.zona-bordeaux h1,
+.zona-bordeaux h2,
+.zona-bordeaux h3,
+.zona-azul a,
+.zona-bordeaux a {
+  color: inherit;
+}
+
+/* ---------- Cabeçalho -------------------------------------------- */
+.cabecalho {
+  padding: var(--espaco-2) 0;
+}
+
+.cabecalho .contentor {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espaco-2);
+}
+
+.marca {
+  display: inline-flex;
+  flex-direction: column;
+  text-decoration: none;
+  line-height: 1.15;
+}
+.marca__nome {
+  font-family: var(--fonte-titulos);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.marca__profissao {
+  font-size: var(--texto-pequeno);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cor-sobre-azul-suave);
+}
+
+.botao-menu {
+  display: none;
+  font: inherit;
+  font-size: var(--texto-pequeno);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cor-sobre-azul);
+  background: transparent;
+  border: 1px solid var(--cor-sobre-azul-suave);
+  padding: 0.5rem 0.9rem;
+  cursor: pointer;
+}
+
+.navegacao ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco-1) var(--espaco-3);
+}
+.navegacao a {
+  display: inline-block;
+  padding: 0.35rem 0;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.navegacao a:hover {
+  border-bottom-color: var(--cor-sobre-azul-suave);
+}
+.navegacao a[aria-current="page"] {
+  border-bottom: 2px solid var(--cor-sobre-azul);
+}
+
+/* Telemóvel: o menu abre e fecha com o botão (só quando há JavaScript;
+ * sem JavaScript as ligações ficam sempre visíveis). */
+@media (max-width: 47.99rem) {
+  .js .botao-menu {
+    display: inline-block;
+  }
+  .js .navegacao {
+    display: none;
+    flex-basis: 100%;
+  }
+  .js .navegacao.aberta {
+    display: block;
+  }
+  .navegacao ul {
+    flex-direction: column;
+    gap: 0;
+    padding-top: var(--espaco-1);
+  }
+  .navegacao li + li {
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  .navegacao a {
+    display: block;
+    padding: 0.8rem 0;
+  }
+}
+
+/* ---------- Faixa de título (azul) ------------------------------- */
+.titulo-pagina {
+  padding: var(--espaco-4) 0 var(--espaco-5);
+}
+.titulo-pagina h1 {
+  margin-bottom: var(--espaco-1);
+}
+.titulo-pagina p {
+  color: var(--cor-sobre-azul-suave);
+  font-size: var(--texto-grande);
+  max-width: var(--largura-texto);
+  margin: 0;
+}
+
+/* Página inicial */
+.abertura {
+  padding: var(--espaco-5) 0 var(--espaco-6);
+}
+.abertura h1 {
+  font-size: clamp(2.5rem, 1.6rem + 4vw, 4.5rem);
+  margin-bottom: var(--espaco-1);
+}
+.abertura__profissao {
+  font-size: var(--texto-grande);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin: 0 0 var(--espaco-4);
+}
+.abertura__frase {
+  max-width: var(--largura-texto);
+  font-size: var(--texto-grande);
+  color: var(--cor-sobre-azul-suave);
+  border-left: 3px solid var(--cor-sobre-azul-suave);
+  padding-left: var(--espaco-2);
+  margin: 0;
+}
+
+/* ---------- Conteúdo (branco) ------------------------------------ */
+.seccao {
+  padding: var(--espaco-5) 0;
+}
+.seccao + .seccao {
+  border-top: 1px solid var(--cor-linha);
+}
+.seccao--perola {
+  background: var(--cor-perola);
+}
+
+.filete::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 2px;
+  margin-top: var(--espaco-2);
+  background: var(--cor-bordeaux);
+}
+
+/* Blocos de texto dentro de uma página */
+.texto > section + section {
+  margin-top: var(--espaco-5);
+}
+.texto > .area + .area {
+  margin-top: 0;
+}
+.texto > p.secundario:last-child {
+  margin-top: var(--espaco-4);
+}
+
+.secundario {
+  color: var(--cor-cinza);
+}
+
+/* Lista das áreas de prática (resumo) */
+.grelha-areas {
+  list-style: none;
+  padding: 0;
+  margin: var(--espaco-3) 0;
+  display: grid;
+  gap: var(--espaco-2);
+  grid-template-columns: 1fr;
+}
+@media (min-width: 36rem) {
+  .grelha-areas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 60rem) {
+  .grelha-areas {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.grelha-areas li {
+  border-top: 2px solid var(--cor-bordeaux);
+  padding: var(--espaco-2) 0 0;
+}
+.grelha-areas h3 {
+  margin-bottom: var(--espaco-1);
+}
+.grelha-areas p {
+  color: var(--cor-cinza);
+  margin: 0;
+}
+
+/* Áreas de prática (página própria) */
+.area {
+  padding: var(--espaco-4) 0;
+  border-top: 1px solid var(--cor-linha);
+  scroll-margin-top: var(--espaco-2);
+}
+.area:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+.indice {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--espaco-4);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco-1) var(--espaco-3);
+}
+
+/* Sobre */
+.sobre {
+  display: grid;
+  gap: var(--espaco-4);
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+@media (min-width: 48rem) {
+  .sobre {
+    grid-template-columns: 15rem 1fr;
+  }
+}
+.retrato {
+  width: 100%;
+  max-width: 15rem;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+}
+.retrato--vazio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--cor-perola);
+  border: 1px solid var(--cor-linha);
+  font-family: var(--fonte-titulos);
+  font-size: 3rem;
+  color: var(--cor-linha);
+  letter-spacing: 0.08em;
+}
+.lista-simples {
+  padding-left: 1.2rem;
+}
+.lista-simples li {
+  margin-bottom: var(--espaco-1);
+}
+.lista-simples li::marker {
+  color: var(--cor-bordeaux);
+}
+
+/* Listas de dados (contactos, informação legal) */
+.dados {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin: 0;
+}
+.dados div {
+  padding: var(--espaco-2) 0;
+  border-bottom: 1px solid var(--cor-linha);
+}
+.dados div:first-child {
+  border-top: 1px solid var(--cor-linha);
+}
+.dados dt {
+  font-size: var(--texto-pequeno);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cor-cinza);
+}
+.dados dd {
+  margin: 0.2rem 0 0;
+  font-size: var(--texto-grande);
+}
+@media (min-width: 40rem) {
+  .dados div {
+    display: grid;
+    grid-template-columns: 11rem 1fr;
+    gap: var(--espaco-2);
+    align-items: baseline;
+  }
+  .dados dd {
+    margin: 0;
+  }
+}
+
+/* Publicações e intervenções */
+.grelha-seccoes {
+  list-style: none;
+  padding: 0;
+  margin: var(--espaco-3) 0 0;
+  display: grid;
+  gap: var(--espaco-3);
+  grid-template-columns: 1fr;
+}
+@media (min-width: 40rem) {
+  .grelha-seccoes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.grelha-seccoes li {
+  border-top: 2px solid var(--cor-bordeaux);
+  padding-top: var(--espaco-2);
+}
+
+.entradas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.entrada {
+  padding: var(--espaco-3) 0;
+  border-bottom: 1px solid var(--cor-linha);
+}
+.entrada:first-child {
+  border-top: 1px solid var(--cor-linha);
+}
+.entrada__data {
+  display: block;
+  font-size: var(--texto-pequeno);
+  color: var(--cor-cinza);
+  letter-spacing: 0.06em;
+}
+.entrada h3 {
+  margin: 0.3rem 0 0.4rem;
+}
+.entrada p {
+  margin: 0;
+  color: var(--cor-cinza);
+}
+
+/* Informação em falta — muito visível de propósito, para não passar
+ * despercebida antes da publicação. */
+.por-preencher {
+  display: inline-block;
+  padding: 0 0.35em;
+  outline: 1px dashed currentColor;
+  font-style: italic;
+}
+
+/* ---------- Faixa de informação e rodapé (bordeaux) -------------- */
+.faixa-info {
+  padding: var(--espaco-5) 0;
+}
+.faixa-info h2 {
+  margin-bottom: var(--espaco-3);
+}
+.faixa-info address {
+  font-style: normal;
+  font-size: var(--texto-grande);
+  line-height: 1.6;
+}
+.faixa-info .secundario,
+.rodape .secundario {
+  color: var(--cor-sobre-bordeaux-suave);
+}
+
+.rodape {
+  padding: var(--espaco-4) 0;
+  font-size: var(--texto-pequeno);
+}
+/* Quando o rodapé vem logo a seguir a uma faixa bordeaux, formam um
+ * só bloco. */
+.rodape--continua {
+  padding-top: 0;
+}
+.rodape__identificacao {
+  font-family: var(--fonte-titulos);
+  font-size: 1.05rem;
+  margin-bottom: var(--espaco-2);
+}
+.rodape ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--espaco-2);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco-1) var(--espaco-3);
+}
+.rodape p {
+  margin: 0;
+}
+
+/* ---------- Impressão -------------------------------------------- */
+@media print {
+  .botao-menu,
+  .navegacao,
+  .saltar {
+    display: none !important;
+  }
+  .zona-azul,
+  .zona-bordeaux {
+    background: none;
+    color: #000;
+  }
+  a {
+    color: #000;
+  }
+}

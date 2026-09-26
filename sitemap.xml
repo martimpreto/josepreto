@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Lista das páginas públicas. Quando a secção "Publicações e Intervenções"
+     for mostrada no menu, acrescentar aqui as respetivas páginas (ver README). -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://josepreto.pt/</loc><lastmod>2026-09-26</lastmod></url>
+  <url><loc>https://josepreto.pt/sobre.html</loc><lastmod>2026-09-26</lastmod></url>
+  <url><loc>https://josepreto.pt/areas-de-pratica.html</loc><lastmod>2026-09-26</lastmod></url>
+  <url><loc>https://josepreto.pt/contactos.html</loc><lastmod>2026-09-26</lastmod></url>
+  <url><loc>https://josepreto.pt/informacao-legal.html</loc><lastmod>2026-09-26</lastmod></url>
+  <url><loc>https://josepreto.pt/privacidade.html</loc><lastmod>2026-09-26</lastmod></url>
+</urlset>
